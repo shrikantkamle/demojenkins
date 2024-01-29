@@ -1,2 +1,3 @@
 echo "From Jenkins file feature branch"
-sh "Jenkinsfile"
+ls 
+whoami
