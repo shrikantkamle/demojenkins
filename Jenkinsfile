@@ -1,12 +1,10 @@
-pipeline{
-agent any
-
-  stages{
-    stage("Hello"){
-      steps{
-        echo "hello from SCM"
-      }
+pipeline {
+    agent { docker { image 'python:3.12.1-alpine3.19' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }
     }
-  }
-  
 }
