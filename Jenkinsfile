@@ -1,2 +1,12 @@
-echo "From Jenkins file"
-sh "Jenkinsfile"
+pipeline{
+agent any
+
+  stages{
+    stage("Hello"){
+      steps{
+        echo "hello from SCM"
+      }
+    }
+  }
+  
+}
